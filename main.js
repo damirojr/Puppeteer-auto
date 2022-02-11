@@ -3,8 +3,12 @@ const puppeteer = require('puppeteer');
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://github.com/damirojr');
-  await page.screenshot({ path: 'example.png' });
-  //await page.focus()
+ // const var1 = 'dolar';
+  //const var2 = 'real';
+  const paginaAdress = `https://github.com/damirojr/Puppeteer-auto`
+
+  await page.goto(paginaAdress);
+  await page.screenshot({ path: 'teste.jpg'});
+  
   await browser.close();
 })();
